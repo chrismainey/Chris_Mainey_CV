@@ -2,7 +2,7 @@
 name: Christopher
 surname: Mainey
 position: "Intelligence Analyst"
-address: "Healthcare Evaluation Data (HED), Health Informatics, Univesity Hospitals Birmingham NHS Foundation Trust"
+address: "Healthcare Evaluation Data (HED), Univesity Hospitals Birmingham NHS Foundation Trust"
 phone: 07708791765
 www: www.hed.nhs.uk, www.mainard.co.uk
 email: "chris.mainey@uh.nhs.uk"
@@ -10,11 +10,11 @@ twitter: chrismainey
 github: chrismainey
 linkedin: chrismainey
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::moderncv
+output: vitae::hyndman
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,  fig.width=7, fig.height= 5 )
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,  fig.width=7, fig.height= 5)
 library(vitae)
 library(rorcid)
 ```
@@ -39,13 +39,14 @@ dt<-my_df %>%
   summarise(freq = n()*10)
 
 ggplot(dt, aes(label=words, size=freq, col=freq))+
-  geom_text_wordcloud(eccentricity = 0.65, area_corr = TRUE, area_corr_power = 1)+
+  geom_text_wordcloud_area(eccentricity = 0.65, area_corr = TRUE, area_corr_power =0.8, grid_margin = 1)+
   #scale_size_area(max_size = 30) +
   scale_radius(range=c(0,30), limits=c(0, NA))+
   scale_color_viridis_c()+
   theme_minimal()
 
 ```
+
 
 # Education
 
@@ -59,6 +60,24 @@ tribble(
   "BSc Microbiology with Industrial Experience", "2002-06", "University of Manchester", "Manchester, UK"
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Employment History
+
+```{r orcid1}
+
+a<- rorcid::orcid_employments("0000-0002-3018-6171")$`0000-0002-3018-6171`$`affiliation-group`$summaries
+
+orcid_data <- as.data.frame(unlist(a, recursive = TRUE))
+orcid_data <- data.table::rbindlist(a, fill=TRUE)
+
+orcid_data %>%
+  detailed_entries(
+    where = `employment-summary.organization.name`,
+    what = `employment-summary.role-title`,
+    when = glue::glue("{`employment-summary.start-date.year.value`} - {`employment-summary.end-date.year.value`}")
+    
+  )
 ```
 
 # Selected Talks, presentations, and teaching experience
@@ -85,49 +104,18 @@ tribble(
 
 # Publications
 
-```{r, eval=FALSE}
-scholar::get_publications("EmD_lTEAAAAJ&EmD_lTEAAAAJ&") %>% 
-  filter(cites > 30) %>% 
-  distinct(title, .keep_all = TRUE) %>%
-  transmute(bibtype = "Article", author = as.character(author),
-            title = as.character(title),
-            journaltitle = as.character(journal), year, key = row_number()) %>% 
-  RefManageR::as.BibEntry() %>% 
-  RefManageR::WriteBib("curie.bib")
-
-bibliography_entries("curie.bib")
-```
-
-# Education History
-
-```{r orcid}
-a<-rorcid::orcid_educations("0000-0002-3018-6171")$`0000-0002-3018-6171`$`affiliation-group`$summaries
-
-orcid_data <- as.data.frame(unlist(a, recursive = TRUE))
-orcid_data <- data.table::rbindlist(a, fill=TRUE)
-
-orcid_data %>%
-  detailed_entries(
-    what = `education-summary.role-title`,
-    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
-    with = `education-summary.organization.name`,
-    where = `education-summary.organization.address.city`
-  )
-
-```
+# Software
 
 ```{r orcid2}
 
-b<- rorcid::orcid_employments("0000-0002-3018-6171")$`0000-0002-3018-6171`$`affiliation-group`$summaries
-
-orcid_data <- as.data.frame(unlist(b, recursive = TRUE))
-orcid_data <- data.table::rbindlist(b, fill=TRUE)
-
-orcid_data %>%
-  detailed_entries(
-    where = `employment-summary.organization.name`,
-    what = `employment-summary.role-title`,
-    when = glue::glue("{`employment-summary.start-date.year.value`} - {`employment-summary.end-date.year.value`}")
+tribble(
+  ~ Package, ~ Summary, ~ Year,
+  "FunnelPlotR", "Funnel Plots for Indirectly Standardised Ratios with overdispersion adjustment", "2019", 
+  "NHSRdatasets", "NHS and Healthcare Related Data for Education and Training", "2019"
+) %>% 
+  detailed_entries(Package, Summary, Year)
     
-  )
+
 ```
+
+
