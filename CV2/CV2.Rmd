@@ -85,20 +85,23 @@ orcid_data %>%
 ```{r}
 tribble(
   ~ Type, ~ Year, ~ Where, ~ Desc,
-  "Talk", 2019, "EARL", "Implementing R use in an NHS Informatics service",
-  "Talk", 2019, "RSS Conference", "CUSUMs and Funnel Plots for reporting standardised mortality",
+  "Talk", 2019, "Enterprise Applications of the R Language (EARL)", "Implementing R use in an NHS Informatics service",
+  "Talk", 2019, "Royal Statistical Society Conference", "CUSUMs and Funnel Plots for reporting standardised mortality",
   "Course", 2019, "NHS Gloucestershire", "Introduction to R: data manipulation, visualisation, and statistical analysis",
-  "Talk", 2019, "Health Foundation", "Statistical and Machine Learning methods for NHS Incident data",
+  "Talk", 2019, "The Health Foundation", "Statistical and Machine Learning methods for NHS Incident data",
   "Talk", 2018, "UCL PCPH Methodology Meeting","Dealing with noisy count data: strategies for tackling over-dispersion, using R",
-  "Workshop", 2018, "UHB Internal", "Introduction to Staistical Process Control",
-  "Workshop", 2018, "UHB Internal", "Introduction to Staitstics",
-  "Lecture", 2014-19, "Various NHS Trusts", "Standaridsed Mortality Ratios"
+  "Workshop", 2018, "UHB Internal", "Introduction to Statistical Process Control",
+  "Workshop", 2018, "UHB Internal", "Introduction to Statistics",
+  "Lecture", 2014 - 2018, "Various NHS Trusts", "Standaridsed Mortality Ratios",
+  "Seminars", 2016-2018, "UCL Medical School", "Use of Evidence (MBChMB)",
+  "Seminars", 2016-2018, "UCL Farr Institute", "Statistical Methods (MSc Data Science for Health)",
+  
 ) %>% 
    detailed_entries(
+    Desc,
     Type,
-    Where,
     Year, 
-    Desc
+    Where
   )
 ```
 
@@ -113,7 +116,7 @@ tribble(
   "FunnelPlotR", "Funnel Plots for Indirectly Standardised Ratios with overdispersion adjustment", "2019", 
   "NHSRdatasets", "NHS and Healthcare Related Data for Education and Training", "2019"
 ) %>% 
-  detailed_entries(Package, Summary, Year)
+  brief_entries(Summary, Package, Year)
     
 
 ```
