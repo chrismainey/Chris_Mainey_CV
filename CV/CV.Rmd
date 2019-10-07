@@ -1,0 +1,118 @@
+---
+name: Christopher
+surname: Mainey
+position: "Professor"
+address: "School of Physics & Chemistry, École Normale Supérieure"
+phone: 07708791765
+www: www.hed.nhs.uk, www.mainard.co.uk
+email: "chris.mainey@uh.nhs.uk"
+twitter: chrismainey
+github: chrismainey
+linkedin: chrismainey
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::moderncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Some stuff about me
+
+ * I'm an enthusiatic R user, writing packages, and contribtuing to the community.
+ * I've completed my PhD in statistical and machine learning modelling of NHS incident data.
+ * Something else
+
+# Key skills
+
+```{r skillzcloud}
+skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",12), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",8), rep("text mining", 4), rep("case-mix adjusmtent",4), rep("marketshare analysis", 3), rep("neural networks", 2), rep("machine learning", 10), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multi-level models", 10), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 13), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",7), rep("course development",4), rep("hospital data", 8), rep("HES",8),  rep("NRLS",10), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 8), rep("benchmarking", 4), rep("statistical analysis", 10), "Auditing", rep("indicator development", 8), rep("spotfire", 12), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), "smoothing methods", "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "gam", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
+
+library(tidytext)
+library(wordcloud2)
+library(dplyr)
+
+my_df<- data.frame(doc=1,words=skillz, stringsAsFactors = FALSE)
+
+dt<-my_df %>% 
+  group_by(doc, words) %>%
+  summarise(freq = n()*10)
+  
+  
+wordcloud(dt$words,dt$freq)
+
+wordcloud2(dt[2:3], minSize = 1, shuffle = FALSE, shape = "cardioid", ellipticity=0.65)
+library(ggwordcloud)
+
+ggplot(dt, aes(label=words, size=freq))+
+  geom_text_wordcloud()+
+  scale_size_area(max_size = 8) +
+  theme_minimal()
+
+#wordcloud2(dt[2:3], minSize = 1, shuffle = FALSE, shape = "cardioid", ellipticity=0.65)
+ggwordcloud2(dt[2:3], minSize = 1, shuffle = FALSE, shape = "cardioid", ellipticity=0.65)
+
+
+```
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "PhD Apllied Statistics and Machine Learning", "2014-19", "UCL", "London, UK",
+  "PgCert. Public Health", "2014-14", "University of Birmingham", "Birmingham, UK",
+  "CIPD Certificate in Training Practise", "2009", "CIPD/City College Coventry", "Coventry, UK",
+  "BSc Microbiology with Industrial Experience", "2002-06", "University of Manchester", "Manchester, UK"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Selected Talks and teaching experience
+
+```{r}
+tribble(
+  ~Year, ~Where, ~Desc,
+  2019, "EARL", "Talk about implementing R use in an NHS Informatics service",
+  2019, "RSS Conference", "Awarded for the discovery of radium and polonium"
+) %>% 
+  brief_entries(
+    glue::glue("Presented at {Where}"),
+    Year, 
+    Desc
+  )
+```
+
+# Publications
+
+```{r}
+scholar::get_publications("EmD_lTEAAAAJ&EmD_lTEAAAAJ&") %>% 
+  filter(cites > 30) %>% 
+  distinct(title, .keep_all = TRUE) %>%
+  transmute(bibtype = "Article", author = as.character(author),
+            title = as.character(title),
+            journaltitle = as.character(journal), year, key = row_number()) %>% 
+  RefManageR::as.BibEntry() %>% 
+  RefManageR::WriteBib("curie.bib")
+
+bibliography_entries("curie.bib")
+```
+
+# Education History
+
+```{r orcid}
+a<-rorcid::orcid_educations("0000-0002-3018-6171")$`0000-0002-3018-6171`$`affiliation-group`$summaries
+
+orcid_data <- as.data.frame(unlist(a, recursive = TRUE))
+orcid_data <- data.table::rbindlist(a, fill=TRUE)
+
+orcid_data %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+
+```
