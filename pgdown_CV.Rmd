@@ -1,0 +1,225 @@
+---
+title: "Christopher Mainey CV"
+author: Chris Mainey
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: false
+---
+
+
+Aside
+================================================================================
+
+
+![Lijia Yu](https://avatars1.githubusercontent.com/u/895125?s=400&v=4){width=80%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> chris.mainey@uhb.nhs.uk
+- <i class="fa fa-github"></i> [github.com/chrismainey](https://github.com/chrismainey)
+- <i class="fa fa-twitter"></i> [twitter.com/chrismainey](https://twitter.com/chrismainey)
+- <i class="fa fa-phone"></i> +44 7708791765
+- For more information, please contact me via email.
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+- Experienced NHS data scientist, working on predictive models using national hospital data, indicaotr development and training.
+
+- Signficant experience with modelling HES data and standardised mortlaity methods.
+
+- Highly skilled in R, SQL, Regression Modelling, Machine Learning
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Christopher Mainey {#title}
+--------------------------------------------------------------------------------
+
+### Expereinced NHS data scientist with interests in predictive modelling and text mining
+
+My work focuses on modelling National Health Service (NHS) data, primarily using the national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with various statistical modelling and machine learning techniques. I have recently subitted my PhD thesis, focused on modelling methods for NHS incident reporting data, at UCL.
+
+I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance, and quality.  I have a passion for using information effectively to impact people’s health and improve their hospital care.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages, and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup at UHB, and run a programme of `R` trainig courses for HED.
+
+# Key skills
+
+```{r skillzcloud}
+skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",8), rep("text mining", 4), rep("case-mix adjusmtent",4), rep("marketshare analysis", 3), rep("neural networks", 2), rep("machine learning", 10), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multi-level models", 10), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",7), rep("course development",4), rep("hospital data", 8), rep("HES",4),  rep("NRLS",), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 8), rep("benchmarking", 4), rep("statistical analysis", 8), "Auditing", rep("indicator development", 8), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), rep("smoothing methods",2), "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "gam", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
+
+library(tidytext)
+library(ggwordcloud)
+library(dplyr)
+
+my_df<- data.frame(doc=1,words=skillz, stringsAsFactors = FALSE)
+
+dt<-my_df %>% 
+  group_by(doc, words) %>%
+  summarise(freq = n()*10)
+
+ggplot(dt, aes(label=words, size=freq, col=freq))+
+  geom_text_wordcloud_area(eccentricity = 0.65, area_corr = TRUE, area_corr_power =0.8, grid_margin = 1)+
+  #scale_size_area(max_size = 30) +
+  scale_radius(range=c(0,30), limits=c(0, NA))+
+  scale_color_viridis_c()+
+  theme_minimal()
+
+```
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### University College London (UCL)
+
+PhD applied Statistics and Machine Learning
+
+London, UK
+
+2019 (submitted)
+
+Thesis: Statistical Methods for NHS incident reporting data
+
+### University of Birmingham
+
+PGCert. Public Health
+
+Birmingham, UK
+
+2014
+
+Thesis: MPH programme, left partially unfinished due to commencing PhD, finished as PGCert instead.
+
+### CIPD / City College Coventry
+
+CIPD Certificante in Training Practice
+
+Coventry, UK
+
+2009
+
+
+### University of Manchester
+
+BSc Microbiology with Industrial Experience
+
+Birmingham, UK
+
+2014
+
+Thesis: A model of Pesudomonas aeruginosa in the Cystic Fibrosis lung.
+Placement: One-year with Arch Biocides
+
+
+
+
+
+Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+### Intelligence Analyst
+
+Healthcare Evaluation Data (HED), Health Informatics, University Hospitals Birmingham NHS Foudation Trust
+
+Birmingham, UK
+
+2012 - 2019
+
+- Statisical lead and senior analyst, focussed on building statistical models in `R` and SAS, indicator design, SQL database infrastructure and processes, and quality assurance.
+- Highly invovled in customer support, training and translating between analysts, business team and users.
+- Line management responsibilities and team work planning, using Agile methods.
+- Run local R usergroup and contribute to national NHS-Community, and established a commericial R training programme.
+
+### Data Manager (AIR Study)
+
+Clinical Immunology (sub-contracted from UHB), University of Birmingham
+
+Birmingham, UK
+
+2012 - 2016
+
+- Data extraction and outcome linkage, for trial participants, from UHB attendance and clincal data.
+
+
+### Informatics Analyst
+
+Health Informatics, University Hospitals Birmingham NHS Foundation Trust
+
+Birmingham, UK
+
+2011 - 2012
+
+- Producing monthly reporting outputs for UHB clinical and performance amanagement functions
+- Specialist analysis, dashboard buiding and development for HIV service.
+
+### Visiting Scientist
+
+University of Alabama at Birmingham
+
+AL, USA
+
+2016 - 2018
+
+- Investigated the role of mitochondria in development of cancer.
+- Investigated the evolution of genome architecture and its role in important evolutionary events.
+- Detected thrombotic thrombocytopenic purpura related mutations in mutiple patients' blood genome.
+  
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Use of Evidence.
+
+First year UCL medical school course on study design and statistics. Led a tutorail group (~30) over course and devlivered lectures to full course group.
+
+London, UK
+
+2016 - 2018
+
+### Computational Biology and Bioinformatics.
+
+Teaching assistant of GBS CB2-201 courses at UAB
+
+AL, USA
+
+2016 - 2017
+
+
+Selected Publications and Posters {data-icon=file}
+--------------------------------------------------------------------------------
+
+### Genetic and epigenetic signals are found predictive to the distribution of intra-individual divergence of alternative splicing.
+
+Poster for 2013 International Conference of Genomics
+
+Qingdao, China
+
+2014
+
+**Yu L**, Chen B, Zhang Z.
+
+### ESCRT-0 complex modulates Rbf mutant cell survival by regulating Rhomboid endosomal trafficking and EGFR signaling.
+
+J Cell Sci. 2016 May 15;129(10):2075-84.
+
+N/A
+
+2016 
+
+Sheng Z, **Yu L**, Zhang T, Pei X, Li X, Zhang Z and Du W. 

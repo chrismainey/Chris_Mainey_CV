@@ -21,7 +21,7 @@ library(rorcid)
 
 I am an NHS Data Scientist/Statistician/Analyst in Health Informatics. I am a member of the Healthcare Evaluation Data (HED) team at University Hospitals Birmingham NHS Foundation Trust (UHB).  My work focuses on modelling National Health Service (NHS) data, primarily using the national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with various statistical modelling and machine learning techniques. I have recently subitted my PhD thesis, focused on modelling methods for NHS incident reporting data, at UCL.
 
-I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance and quality.  I have a passion for using information effectively to influence policy and impact people’s health and improve their hospital care.  I am an experienced trainer, presenter and post-grad teacher. I have build and release several R package, and keen contributor to the NHS-R Community. I leads a local `R` usergroup at UHB, and run a programme of `R` trainig courses for HED.
+I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance, and quality.  I have a passion for using information effectively to impact people’s health and improve their hospital care.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages, and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup at UHB, and run a programme of `R` trainig courses for HED.
 
 # Key skills
 
