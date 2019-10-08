@@ -4,7 +4,7 @@ author: Chris Mainey
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
-    ccs: ["CV.css"]
+    css: ["CV.css"]
      # set it to true for a self-contained HTML page but it'll take longer to render
     self_contained: true
     
@@ -24,6 +24,7 @@ Contact Info {#contact}
 - <i class="fa fa-envelope"></i> chris.mainey@uhb.nhs.uk
 - <i class="fa fa-github"></i> [github.com/chrismainey](https://github.com/chrismainey)
 - <i class="fa fa-twitter"></i> [twitter.com/chrismainey](https://twitter.com/chrismainey)
+- <i class="fa fa-linkedin"></i> [linkedin.com/chrismainey](https://www.linkedin.com/in/chrismainey/)
 - <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-3018-6171" href="https://orcid.org/0000-0002-3018-6171" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0002-3018-6171</a></div>
 - <i class="fa fa-phone"></i> +44 7708791765
 - For more information, please contact me via email.
@@ -63,7 +64,7 @@ I advise and train hospitals, commissioners, regulators and the private sector o
 <br>
 
 ### Key skills
-```{r skillzcloud, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=4}
+```{r skillzcloud, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=4.5}
 skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",6), rep("text mining", 4), rep("case-mix adjustment",4), rep("market-share analysis", 3), rep("neural networks", 2), rep("machine learning", 8), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multilevel models", 6), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",4), rep("course development",4), rep("hospital data", 8), rep("HES",4),  rep("NRLS",), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 6), rep("benchmarking", 4), rep("statistical analysis", 6), "Auditing", rep("indicator development", 6), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), rep("smoothing methods",2), "boosting", "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
 
 library(ggplot2)
@@ -145,7 +146,7 @@ Birmingham, UK
 2012 - 2019
 
 - Statistical lead and senior analyst, focussed on building predictive models in `R` and SAS, indicator design, SQL database infrastructure and processes, as well as quality assurance.
-- Building on-line national benchmarking analysis tools, available from [www.hed.nhs.uk](www.hed.nhs.uk).
+- Building online national benchmarking analysis tools: [www.hed.nhs.uk](https://www.hed.nhs.uk).
 - Highly involved in customer support, training and translating between analysts, business teams and users.
 - Line management and team work planning, using Agile methods.
 - Run local `R` usergroup, contributing to national NHS-Community, and established a commercial `R` training programme.
@@ -197,14 +198,13 @@ Birmingham, UK
 
   
 
-<br>
 
 
 
-Teaching Experience {data-icon=chalkboard-teacher}
+Teaching and Assessment Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-### Use of Evidence.
+### Use of Evidence
 
 First year UCL medical school course on study design and statistics. Led a tutorial group over the course and delivered lectures to full course group.
 
@@ -220,24 +220,40 @@ London, UK
 
 2016 - 2017
 
+### Understanding the NHS
+
+Assessing first year medical student assignments on NHS structure, history, and current/future challenges.
+
+London, UK
+
+2016 - 2017
+
+### Research dissertations
+
+Second assessor on MSc Mental Health dissertations for students with quantitative studies.
+
+London, UK
+
+2016 - 2017
 
 
-Selected Publications, Posters and Talks {data-icon=file}
+
+Selected Publications, Posters & Talks {data-icon=file}
 --------------------------------------------------------------------------------
 
-### Modelling Incident Reporting in the NHS
+### Driving R adoption in an NHS information service: barriers and solutions
 
-Poster for Royal Statistical Society Conference
+Talk at Enterprise Applications of the R Language (EARL) conference
 
-Cardiff, UK
+London, UK
 
-2018
+2019
 
-**Mainey C**, Freemantle N
+**Mainey C**
 
-### Modelling Incident Reporting in the NHS
+### Using funnel plots and CUSUM techniques to monitor hospital-standardised mortality
 
-Talk for Royal Statistical Society Conference
+Talk at Royal Statistical Society Conference
 
 Belfast, UK
 
