@@ -58,7 +58,7 @@ Christopher Mainey {#title}
 
 My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I have recently submitted my PhD thesis, on modelling methods for NHS incident reporting data, to UCL.
 
-I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance, and quality.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
+I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor quality, performance, and mortality.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
 
 <br>
 
@@ -145,10 +145,10 @@ Birmingham, UK
 2012 - 2019
 
 - Statistical lead and senior analyst, focussed on building predictive models in `R` and SAS, indicator design, SQL database infrastructure and processes, as well as quality assurance.
-- Building on-line national benchmarking analysis tools, available from www.hed.nhs.uk .
-- Highly involved in customer support, training and translating between analysts, business team and users.
+- Building on-line national benchmarking analysis tools, available from [www.hed.nhs.uk](www.hed.nhs.uk).
+- Highly involved in customer support, training and translating between analysts, business teams and users.
 - Line management and team work planning, using Agile methods.
-- Run local `R` usergroup, contributing to national NHS-Community, and have established a commercial `R` training programme.
+- Run local `R` usergroup, contributing to national NHS-Community, and established a commercial `R` training programme.
 
 ### Data Manager (AIR Study)
 
@@ -192,7 +192,7 @@ Birmingham, UK
 2009 - 2010
 
 - Producing statistics for information requests.
-- Investigative analysis, e.g. difference from nationally published figures and research data
+- Investigative analysis, e.g. difference from nationally published figures and research data.
 - Supervising/validating work of junior analysts.
 
   
@@ -206,7 +206,7 @@ Teaching Experience {data-icon=chalkboard-teacher}
 
 ### Use of Evidence.
 
-First year UCL medical school course on study design and statistics. Led a tutorial group over course and delivered lectures to full course group.
+First year UCL medical school course on study design and statistics. Led a tutorial group over the course and delivered lectures to full course group.
 
 London, UK
 
@@ -222,8 +222,30 @@ London, UK
 
 
 
-Selected Publications and Posters {data-icon=file}
+Selected Publications, Posters and Talks {data-icon=file}
 --------------------------------------------------------------------------------
+
+### Modelling Incident Reporting in the NHS
+
+Poster for Royal Statistical Society Conference
+
+Cardiff, UK
+
+2018
+
+**Mainey C**, Freemantle N
+
+### Modelling Incident Reporting in the NHS
+
+Talk for Royal Statistical Society Conference
+
+Belfast, UK
+
+2019
+
+**Mainey C**
+
+
 
 ### Modelling Incident Reporting in the NHS
 
