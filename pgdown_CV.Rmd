@@ -4,8 +4,10 @@ author: Chris Mainey
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
-    # set it to true for a self-contained HTML page but it'll take longer to render
-    self_contained: false
+    ccs: ["CV.css"]
+     # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+    
 ---
 
 
@@ -13,7 +15,7 @@ Aside
 ================================================================================
 
 
-![Lijia Yu](https://avatars1.githubusercontent.com/u/895125?s=400&v=4){width=80%}
+![Chris Mainey](https://github.com/chrismainey/Chris_Mainey_CV/blob/master/5.PNG?raw=true)
 
 
 Contact Info {#contact}
@@ -22,23 +24,24 @@ Contact Info {#contact}
 - <i class="fa fa-envelope"></i> chris.mainey@uhb.nhs.uk
 - <i class="fa fa-github"></i> [github.com/chrismainey](https://github.com/chrismainey)
 - <i class="fa fa-twitter"></i> [twitter.com/chrismainey](https://twitter.com/chrismainey)
+- <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-3018-6171" href="https://orcid.org/0000-0002-3018-6171" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0002-3018-6171</a></div>
 - <i class="fa fa-phone"></i> +44 7708791765
 - For more information, please contact me via email.
 
 
-Skills {#skills}
+Summary {#skills}
 --------------------------------------------------------------------------------
 
-- Experienced NHS data scientist, working on predictive models using national hospital data, indicaotr development and training.
+- Experienced NHS data scientist, working on predictive models using national hospital data, indicator development and training.
 
-- Signficant experience with modelling HES data and standardised mortlaity methods.
+- Significant experience with modelling HES data and standardised mortality methods.
 
 - Highly skilled in R, SQL, Regression Modelling, Machine Learning
 
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
-
+<br>
 This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
 Last updated on `r Sys.Date()`.
@@ -51,18 +54,19 @@ Main
 Christopher Mainey {#title}
 --------------------------------------------------------------------------------
 
-### Expereinced NHS data scientist with interests in predictive modelling and text mining
+### Experienced NHS data scientist with interests in predictive modelling, machine learning, text mining, and teaching
 
-My work focuses on modelling National Health Service (NHS) data, primarily using the national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with various statistical modelling and machine learning techniques. I have recently subitted my PhD thesis, focused on modelling methods for NHS incident reporting data, at UCL.
+My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I have recently submitted my PhD thesis, on modelling methods for NHS incident reporting data, to UCL.
 
-I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance, and quality.  I have a passion for using information effectively to impact people’s health and improve their hospital care.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages, and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup at UHB, and run a programme of `R` trainig courses for HED.
+I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor mortality, performance, and quality.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
 
-# Key skills
+<br>
 
-```{r skillzcloud}
-skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",8), rep("text mining", 4), rep("case-mix adjusmtent",4), rep("marketshare analysis", 3), rep("neural networks", 2), rep("machine learning", 10), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multi-level models", 10), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",7), rep("course development",4), rep("hospital data", 8), rep("HES",4),  rep("NRLS",), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 8), rep("benchmarking", 4), rep("statistical analysis", 8), "Auditing", rep("indicator development", 8), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), rep("smoothing methods",2), "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "gam", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
+### Key skills
+```{r skillzcloud, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=4}
+skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",6), rep("text mining", 4), rep("case-mix adjustment",4), rep("market-share analysis", 3), rep("neural networks", 2), rep("machine learning", 8), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multilevel models", 6), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",4), rep("course development",4), rep("hospital data", 8), rep("HES",4),  rep("NRLS",), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 6), rep("benchmarking", 4), rep("statistical analysis", 6), "Auditing", rep("indicator development", 6), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), rep("smoothing methods",2), "boosting", "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
 
-library(tidytext)
+library(ggplot2)
 library(ggwordcloud)
 library(dplyr)
 
@@ -70,17 +74,17 @@ my_df<- data.frame(doc=1,words=skillz, stringsAsFactors = FALSE)
 
 dt<-my_df %>% 
   group_by(doc, words) %>%
-  summarise(freq = n()*10)
+  summarise(freq = n()^2)
 
 ggplot(dt, aes(label=words, size=freq, col=freq))+
-  geom_text_wordcloud_area(eccentricity = 0.65, area_corr = TRUE, area_corr_power =0.8, grid_margin = 1)+
-  #scale_size_area(max_size = 30) +
-  scale_radius(range=c(0,30), limits=c(0, NA))+
+  geom_text_wordcloud_area(eccentricity = 0.55, area_corr = FALSE,
+                          area_corr_power = 1/.7,
+                          seed=133)+
+ #scale_size_area(max_size = 30, range = c(1, 30)) +
+  scale_radius(range=c(2,30), limits=c(0,NA))+
   scale_color_viridis_c()+
   theme_minimal()
-
 ```
-
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -103,11 +107,11 @@ Birmingham, UK
 
 2014
 
-Thesis: MPH programme, left partially unfinished due to commencing PhD, finished as PGCert instead.
+MPH programme, left partially unfinished due to commencing PhD, finished as PGCert instead.
 
 ### CIPD / City College Coventry
 
-CIPD Certificante in Training Practice
+CIPD Certificate in Training Practice
 
 Coventry, UK
 
@@ -122,7 +126,7 @@ Birmingham, UK
 
 2014
 
-Thesis: A model of Pesudomonas aeruginosa in the Cystic Fibrosis lung.
+Thesis: A model of Pseudomonas aeruginosa in the Cystic Fibrosis lung.
 Placement: One-year with Arch Biocides
 
 
@@ -134,16 +138,17 @@ Experience {data-icon=laptop}
 
 ### Intelligence Analyst
 
-Healthcare Evaluation Data (HED), Health Informatics, University Hospitals Birmingham NHS Foudation Trust
+Healthcare Evaluation Data (HED), Health Informatics, University Hospitals Birmingham NHS FT
 
 Birmingham, UK
 
 2012 - 2019
 
-- Statisical lead and senior analyst, focussed on building statistical models in `R` and SAS, indicator design, SQL database infrastructure and processes, and quality assurance.
-- Highly invovled in customer support, training and translating between analysts, business team and users.
-- Line management responsibilities and team work planning, using Agile methods.
-- Run local R usergroup and contribute to national NHS-Community, and established a commericial R training programme.
+- Statistical lead and senior analyst, focussed on building predictive models in `R` and SAS, indicator design, SQL database infrastructure and processes, as well as quality assurance.
+- Building on-line national benchmarking analysis tools, available from www.hed.nhs.uk .
+- Highly involved in customer support, training and translating between analysts, business team and users.
+- Line management and team work planning, using Agile methods.
+- Run local `R` usergroup, contributing to national NHS-Community, and have established a commercial `R` training programme.
 
 ### Data Manager (AIR Study)
 
@@ -153,73 +158,98 @@ Birmingham, UK
 
 2012 - 2016
 
-- Data extraction and outcome linkage, for trial participants, from UHB attendance and clincal data.
+- Data extraction and outcome linkage for trial participants, from UHB attendance and clinical data systems.
 
 
 ### Informatics Analyst
 
-Health Informatics, University Hospitals Birmingham NHS Foundation Trust
+Health Informatics, University Hospitals Birmingham NHS FT
 
 Birmingham, UK
 
 2011 - 2012
 
-- Producing monthly reporting outputs for UHB clinical and performance amanagement functions
-- Specialist analysis, dashboard buiding and development for HIV service.
+- Producing monthly reporting outputs for UHB clinical and performance management functions
+- Specialist analysis, dashboard building, and information development for HIV service.
 
-### Visiting Scientist
+### Cancer Informatics Analyst
 
-University of Alabama at Birmingham
+Arden Cancer Network
 
-AL, USA
+Coventry, UK
 
-2016 - 2018
+2010 - 2011
 
-- Investigated the role of mitochondria in development of cancer.
-- Investigated the evolution of genome architecture and its role in important evolutionary events.
-- Detected thrombotic thrombocytopenic purpura related mutations in mutiple patients' blood genome.
+- Informatics support for network service improvement projects.
+- Constructed cancer waiting times reporting system and various automated templates.
+
+### Information Office
+
+West Midlands Cancer Intelligence Unit (WMCIU)
+
+Birmingham, UK
+
+2009 - 2010
+
+- Producing statistics for information requests.
+- Investigative analysis, e.g. difference from nationally published figures and research data
+- Supervising/validating work of junior analysts.
+
   
 
+<br>
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ### Use of Evidence.
 
-First year UCL medical school course on study design and statistics. Led a tutorail group (~30) over course and devlivered lectures to full course group.
+First year UCL medical school course on study design and statistics. Led a tutorial group over course and delivered lectures to full course group.
 
 London, UK
 
 2016 - 2018
 
-### Computational Biology and Bioinformatics.
+### Statistical Methods in Epidemiology
 
-Teaching assistant of GBS CB2-201 courses at UAB
+Teaching assistant on MSc Data Science for Health, UCL Farr Institute/LSHTM
 
-AL, USA
+London, UK
 
 2016 - 2017
+
 
 
 Selected Publications and Posters {data-icon=file}
 --------------------------------------------------------------------------------
 
-### Genetic and epigenetic signals are found predictive to the distribution of intra-individual divergence of alternative splicing.
+### Modelling Incident Reporting in the NHS
 
-Poster for 2013 International Conference of Genomics
+Poster for Royal Statistical Society Conference
 
-Qingdao, China
+Cardiff, UK
 
-2014
+2018
 
-**Yu L**, Chen B, Zhang Z.
+**Mainey C**, Freemantle N
 
-### ESCRT-0 complex modulates Rbf mutant cell survival by regulating Rhomboid endosomal trafficking and EGFR signaling.
+### Can we build statistical models of incident reporting in the NHS?
 
-J Cell Sci. 2016 May 15;129(10):2075-84.
+Poster for Patient Safety Congress Conference
+
+Manchester, UK
+
+2017
+
+**Mainey C**
+
+### Brief Report: Immunization of HIV-Infected Adults in the UK With Haemophilus influenzae b/Meningococcal C Glycoconjugate and Pneumococcal Polysaccharide Vaccines
+
+
+J Acquir Immune Defic Syndr. 2016 Nov 1;73(3):287-293.
 
 N/A
 
 2016 
 
-Sheng Z, **Yu L**, Zhang T, Pei X, Li X, Zhang Z and Du W. 
+MacLennan C, Richter A, Hodson J, Faustini S, Birtwistle J, Whitelegg A, Chigiga J, Singo M, Walker-Haywood J, Mulugeta B, Masuka S, **Mainey C**, Plant T, Drayson M; Manavi K
