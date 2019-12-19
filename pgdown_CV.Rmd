@@ -59,7 +59,7 @@ Christopher Mainey {#title}
 
 ### Experienced NHS data scientist with interests in predictive modelling, machine learning, text mining, and teaching
 
-My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I have recently submitted my PhD thesis, on modelling methods for NHS incident reporting data, to UCL.
+My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I have recently completed my PhD at UCL, on modelling methods for NHS incident reporting data, and am currently making minor corrections.
 
 I advise and train hospitals, commissioners, regulators and the private sector on using data to manage hospitals, monitor quality, performance, and mortality.  I am an experienced trainer, presenter and post-grad teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
 
@@ -127,7 +127,7 @@ BSc Microbiology with Industrial Experience
 
 Birmingham, UK
 
-2014
+2006
 
 Thesis: A model of Pseudomonas aeruginosa in the Cystic Fibrosis lung.
 Placement: One-year with Arch Biocides
