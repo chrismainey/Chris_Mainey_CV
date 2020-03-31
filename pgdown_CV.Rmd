@@ -27,7 +27,7 @@ Contact Info {#contact}
 - <i class="fa fa-twitter"></i> [twitter.com/chrismainey](https://twitter.com/chrismainey)
 - <i class="fa fa-linkedin"></i> [linkedin.com/chrismainey](https://www.linkedin.com/in/chrismainey/)
 - <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-3018-6171" href="https://orcid.org/0000-0002-3018-6171" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0002-3018-6171</a></div>
-- <i class="fa fa-phone"></i> +44 7708791765
+- <i class="fa fa-phone"></i> +44 121 371 2435
 - For more information, please contact me via email.
 
 
@@ -61,6 +61,7 @@ Christopher Mainey {#title}
 
 ### Experienced NHS data scientist with interests in predictive modelling, machine learning, text mining, and teaching
 
+<<<<<<< HEAD
 My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I completed my PhD at UCL, on modelling NHS incident reporting data using using quantitative models and text mining methods.
 
 I advise and train NHS teams and the private sector on using data to manage hospitals, monitor quality, performance, and mortality.  I am an experienced trainer, presenter and post-graduate teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
@@ -129,7 +130,7 @@ BSc Microbiology with Industrial Experience
 
 Birmingham, UK
 
-2014
+2006
 
 Thesis: A model of Pseudomonas aeruginosa in the Cystic Fibrosis lung.
 Placement: One-year with Arch Biocides
@@ -202,7 +203,7 @@ Coventry, UK
 - Informatics support for network service improvement projects.
 - Constructed cancer waiting times reporting system and various automated templates.
 
-### Information Office
+### Information Officer
 
 West Midlands Cancer Intelligence Unit (WMCIU)
 
