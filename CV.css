@@ -367,7 +367,10 @@ color: #555;
 }
 
 #skills{
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 12px;
+
+
 }
 
 #skills ul{
@@ -379,7 +382,7 @@ color: #555;
   position: absolute;
   bottom: 0;
   right: var(--sidebar-horizontal-padding);
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   font-style: italic;
   line-height: 1.1;
   text-align: right;
