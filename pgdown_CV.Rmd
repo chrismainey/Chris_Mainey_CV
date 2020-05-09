@@ -96,7 +96,7 @@ Education {data-icon=graduation-cap data-concise=true}
 
 ### University College London (UCL)
 
-PhD applied Statistics and Machine Learning
+PhD Applied Statistics and Machine Learning
 
 London, UK
 
