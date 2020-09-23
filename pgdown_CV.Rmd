@@ -63,13 +63,14 @@ Christopher Mainey {#title}
 
 My work focuses on modelling National Health Service (NHS) data, primarily using national Hospital Episode Statistics (HES). I work primarily in `R` and SQL Server, and have experience with statistical modelling and machine learning methods. I completed my PhD at UCL, on modelling NHS incident reporting data using using quantitative models and text mining methods.
 
-I advise and train NHS teams and the private sector on using data to manage hospitals, monitor quality, performance, and mortality.  I am an experienced trainer, presenter and post-graduate teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` usergroup, and run a programme of `R` training courses for HED.
+I advise and train NHS teams and the private sector on using data to manage hospitals, monitor quality, performance, and mortality.  I am an experienced trainer, presenter and post-graduate teacher. I have built and released several `R` packages and am a keen contributor to the NHS-R Community. I lead a local `R` user-group, and run a programme of `R` training courses for HED.
 
 <br>
 
 ### Key skills
 ```{r skillzcloud, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=4.5}
-skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",6), rep("text mining", 4), rep("case-mix adjustment",4), rep("market-share analysis", 3), rep("neural networks", 2), rep("machine learning", 8), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multilevel models", 6), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",4), rep("course development",4), rep("hospital data", 8), rep("HES",4),  rep("NRLS",), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 6), rep("benchmarking", 4), rep("statistical analysis", 6), "Auditing", rep("indicator development", 6), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3), rep("smoothing methods",2), "boosting", "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "Travis-CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
+skillz<-c(rep("teaching", 7), rep("R",15), rep("SQL",10), rep("GLM", 8), rep("regression", 6), rep("work planning",4), rep("line management", 3), rep("report writing",4),rep("regression trees", 4), rep("GAM",6), rep("text mining", 4), rep("case-mix adjustment",4), rep("market-share analysis", 3), rep("neural networks", 2), rep("machine learning", 6), rep("Rmarkdown", 6), rep("R package dev", 6), rep("git",8), rep("multilevel models", 6), rep("data visualisation", 5), rep("training", 6), "Stata", rep("SAS",3), rep("Data Analysis", 10), rep("Data linkage", 5), rep("Communication", 3), rep("community organisation", 4), rep("trouble shooting",4), rep("course development",4), rep("hospital data", 8), rep("HES",6),  rep("NRLS",6), rep("overdispersion", 7), rep("SPC", 6), rep("cusum", 5), rep("standardised mortality", 6), rep("benchmarking", 4), rep("statistical analysis", 6), "Auditing", rep("indicator development", 6), rep("spotfire", 10), rep("python",4), rep("epidemiological analysis", 2), rep("critical appraisal",2), rep("hypothesis testing", 3),
+rep("linux", 2), rep("Agile",2), rep("Automation", 2),rep("smoothing methods",2), rep("rmarkdown", 3), "boosting", "time-series analysis", "system design", "dashboard building", "web development", "Shiny", "ggplot2", "caret", "wordclouds", "topic modelling", "LDA", "mgcv", "glmnet", "FunnelPlotR", "NHSRdatasets", "randomForest", "tidyverse", "databases", "DBI", "odbc", "tidytext", "quanteda", "keras", "multinom", "rpart", "xaringan", "blogdown", "bookdown", "vitae", "leaflet", "Hugo", "CI", "Codecov", "testthat", "devtools", "usethis", "RStudio", "lme4", "glmmTMB")
 
 library(ggplot2)
 library(ggwordcloud)
@@ -86,8 +87,8 @@ ggplot(dt, aes(label=words, size=freq, col=freq))+
                           area_corr_power = 1/.7,
                           seed=133)+
  #scale_size_area(max_size = 30, range = c(1, 30)) +
-  scale_radius(range=c(2,30), limits=c(0,NA))+
-  scale_color_viridis_c()+
+  scale_radius(range=c(2,28), limits=c(0,NA))+
+  scale_color_viridis_c(begin = 0, end=1, option = "D")+
   theme_minimal()
 ```
 
@@ -259,6 +260,18 @@ London, UK
 Selected Publications, Posters & Talks {data-icon=file}
 --------------------------------------------------------------------------------
 
+### Ethnicity and risk of death in patients hospitalised for COVID-19 infection in the UK: an observational cohort study in an urban catchment area
+
+
+BMJ Open Respiratory Research. 2020;7:e000644.
+
+N/A
+
+2020 
+
+Sapey E, Gallier S, **Mainey C**, Nightingale P, McNulty D, Crothers H, Evison F, Reeves K, Pagano D, Denniston A, Niranthrakumar K, Diggle P, Ball S
+
+
 ### Driving R adoption in an NHS information service: barriers and solutions
 
 Talk at Enterprise Applications of the R Language (EARL) conference
@@ -267,7 +280,7 @@ London, UK
 
 2019
 
-**Mainey C**
+
 
 ### Using funnel plots and CUSUM techniques to monitor hospital-standardised mortality
 
@@ -277,7 +290,6 @@ Belfast, UK
 
 2019
 
-**Mainey C**
 
 
 
@@ -288,18 +300,6 @@ Poster for Royal Statistical Society Conference
 Cardiff, UK
 
 2018
-
-**Mainey C**, Freemantle N
-
-### Can we build statistical models of incident reporting in the NHS?
-
-Poster for Patient Safety Congress Conference
-
-Manchester, UK
-
-2017
-
-**Mainey C**
 
 ### Brief Report: Immunization of HIV-Infected Adults in the UK With Haemophilus influenzae b/Meningococcal C Glycoconjugate and Pneumococcal Polysaccharide Vaccines
 
