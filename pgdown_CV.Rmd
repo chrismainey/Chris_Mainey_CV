@@ -151,7 +151,7 @@ Birmingham, UK
 2020 - Present
 
 - Managing and delivering senior analyst functions in HED (see below)
-- Natural language processing projects including mapping text to ontologies for PIONEER project
+- Natural language processing projects including analysis of incident reporting data
 - Managing informatics training function and team, including strategy and delivery, and commercial R training courses
 - Line management and leading data science projects in research and production, such as prediction of missing categorical data, survival modelling, and risk prediction from electronic patient records.
 
