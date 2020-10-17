@@ -142,7 +142,7 @@ Placement: One-year with Arch Biocides
 Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
-### Senior Statistical Intelligence Analyst
+### Senior Data Scientist
 
 Healthcare Evaluation Data (HED), Health Informatics, University Hospitals Birmingham NHS FT
 
